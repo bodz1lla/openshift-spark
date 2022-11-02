@@ -34,9 +34,9 @@ USER root
 RUN chgrp root /etc/passwd && chmod ug+rw /etc/passwd
 
 # Install required RPMs and ensure that the packages were installed
-RUN yum install -y java-1.8.0-openjdk && \
-    yum clean all -y && \
-    rm -rf /var/cache/yum
+# RUN yum install -y java-1.8.0-openjdk && \
+#     yum clean all -y && \
+#     rm -rf /var/cache/yum
 
 # Add Tini - init for containers
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /sbin/tini
