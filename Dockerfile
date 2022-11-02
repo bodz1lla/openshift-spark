@@ -34,7 +34,7 @@ USER root
 RUN chgrp root /etc/passwd && chmod ug+rw /etc/passwd
 
 # Install required RPMs and ensure that the packages were installed
-RUN yum install -y java-1.8.0-openjdk wget && \
+RUN yum install -y java-1.8.0-openjdk && \
     yum clean all -y && \
     rm -rf /var/cache/yum
 
